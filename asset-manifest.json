@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/portfolio_project/static/css/main.33d246ab.css",
+    "main.js": "/portfolio_project/static/js/main.d348a0fd.js",
+    "static/js/787.092224b8.chunk.js": "/portfolio_project/static/js/787.092224b8.chunk.js",
+    "static/media/Pygame_logo.svg.png": "/portfolio_project/static/media/Pygame_logo.svg.dc881c6fde0b2b3801df.png",
+    "static/media/back_end.png": "/portfolio_project/static/media/back_end.7ec69dc95e6e384ccd7b.png",
+    "static/media/laravel.png": "/portfolio_project/static/media/laravel.be3f622df04a403a80e5.png",
+    "static/media/wing-python-ide-R5l1cq.png": "/portfolio_project/static/media/wing-python-ide-R5l1cq.db91fc92558d0f510ce6.png",
+    "static/media/WampServer-logo.svg.png": "/portfolio_project/static/media/WampServer-logo.svg.a91abc4e589ce7f3e718.png",
+    "static/media/XAMPP_Logo.png": "/portfolio_project/static/media/XAMPP_Logo.22fdb6a8860bda340db6.png",
+    "static/media/front_end.webp": "/portfolio_project/static/media/front_end.5ae9f47dd834d0dcec05.webp",
+    "index.html": "/portfolio_project/index.html",
+    "main.33d246ab.css.map": "/portfolio_project/static/css/main.33d246ab.css.map",
+    "main.d348a0fd.js.map": "/portfolio_project/static/js/main.d348a0fd.js.map",
+    "787.092224b8.chunk.js.map": "/portfolio_project/static/js/787.092224b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33d246ab.css",
+    "static/js/main.d348a0fd.js"
+  ]
+}
