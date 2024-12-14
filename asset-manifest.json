@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_project/static/css/main.33d246ab.css",
-    "main.js": "/portfolio_project/static/js/main.da344692.js",
+    "main.js": "/portfolio_project/static/js/main.5c71af1a.js",
     "static/js/787.092224b8.chunk.js": "/portfolio_project/static/js/787.092224b8.chunk.js",
     "static/media/Pygame_logo.svg.png": "/portfolio_project/static/media/Pygame_logo.svg.dc881c6fde0b2b3801df.png",
     "static/media/back_end.png": "/portfolio_project/static/media/back_end.7ec69dc95e6e384ccd7b.png",
@@ -12,11 +12,11 @@
     "static/media/front_end.webp": "/portfolio_project/static/media/front_end.5ae9f47dd834d0dcec05.webp",
     "index.html": "/portfolio_project/index.html",
     "main.33d246ab.css.map": "/portfolio_project/static/css/main.33d246ab.css.map",
-    "main.da344692.js.map": "/portfolio_project/static/js/main.da344692.js.map",
+    "main.5c71af1a.js.map": "/portfolio_project/static/js/main.5c71af1a.js.map",
     "787.092224b8.chunk.js.map": "/portfolio_project/static/js/787.092224b8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.33d246ab.css",
-    "static/js/main.da344692.js"
+    "static/js/main.5c71af1a.js"
   ]
 }
