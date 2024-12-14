@@ -1,8 +1,17 @@
 import { useRef } from 'react';
+import { useEffect } from "react";
+import ScrollReveal from "scrollreveal";
 
 export default function Contact(props) {
   const { them } = props;
-  
+  const sr = ScrollReveal({
+    distance:"40px",
+    reset :true,
+    duration:1000 
+  })
+useEffect(()=>{
+    sr.reveal('.crd',{delay:200,origin:"bottom"})
+  },[])
   // Refs for each contact's information
   const phoneRef = useRef(null);
   const whatsappRef = useRef(null);
@@ -30,7 +39,7 @@ export default function Contact(props) {
       </h4>
       <div className="row">
         {/* Phone */}
-        <div className="p-1 col-12 col-md-6">
+        <div className="p-1 col-12 col-md-6 crd">
           <div className={`cards p-3 txt ${them === 'clear' ? ' text-dark' : "text-light"}`}>
             <div className="card-body">
               <h5 className="card-title">
@@ -44,7 +53,7 @@ export default function Contact(props) {
         </div>
 
         {/* WhatsApp */}
-        <div className="p-1 col-12 col-md-6">
+        <div className="p-1 col-12 col-md-6 crd">
           <div className={`cards p-3 txt ${them === 'clear' ? ' text-dark' : "text-light"}`}>
             <div className="card-body">
               <h5 className="card-title">
@@ -59,7 +68,7 @@ export default function Contact(props) {
         </div>
 
         {/* Email */}
-        <div className="p-1 col-12">
+        <div className="p-1 col-12 crd">
           <div className={`cards p-3 txt ${them === 'clear' ? ' text-dark' : "text-light"}`}>
             <div className="card-body">
               <h5 className="card-title">

@@ -58,7 +58,7 @@ function App() {
           </section>
           <main className='main col-12 mt-2 pb-3 mb-5'>
             <Routes>
-              <Route path='/' element={ <About them={them} /> } />
+              <Route path='/portfolio_project/' element={ <About them={them} /> } />
               <Route path='/Resume' element={ <Resume them={them}  /> } />
               <Route path='/Contact' element={ <Contact them={them} /> } />
             </Routes>

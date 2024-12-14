@@ -5,7 +5,7 @@ export default function Nav(props){
         <nav className='col-12 d-flex align-items-center justify-content-center h-100'>
             <ul className={`${direction} w-100 d-flex align-items-center justify-content-evenly`}>  
                 <li>
-                    <Link to='/' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
+                    <Link to='/portfolio_project/' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
                 {them === "clear"?
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAl5JREFUSEu11dmrjlEUBvDfkQwZLtwhUwohynClECVDhkgoQ8o8X1HIEHeuzBkuhBIXpkSUC+ONlEyZp39AMg9hL+2jc97e7wwXZ9fXt9+9197PWut51tpVmnhUNfH96gNoiWkYi4Hojj94g3u4hNP4WcnRugDGYV++tK5AX2AJrpYZVQLYnIy35AMPsRe38SqvdcVgbESvvLYWO4ogZQBxcQBE2CtwsA734/xy7OJfulfn+f8jRYCJOI8fGI2bDRTBpMTRmWw7HLeqz9UEaIen6Ig12FlyeR8sxCK0zftB8mGMwDo8yYIIJ2upKIjanw+9TXtbcQqfM9GRilVoUSGqUNQohPKm4FwR4AIm4B2CxLIRXkVke7JdmxT1rJTS9ehR40DwtrgIEBd3yeHFf4ANQ880v5O8u47jeF6CHOmdh6Up6r64iyFFgC9onX/fGkhu0Swi+pTU9D6pqUMR4GMmrj1iHiP0vywXXHBQc5TtxdkP+XzMa5Ec7PdOpT8gtYcH+aZoC2WKi7WyvUE5PY/RrwhwIklsJmpWZGMjiMrelng7lqp+bhFgDo5mEkPvvxvJQ3O8zAqckSVeK0VBcKQpJDo/af9IIwFW5jbxLKf5ezGC+B6Dy6kiv2IoHjUQJGyjGTbDyNRmblQiLtY3YHtWw+yk5yjASiMujHQcSp00JBpRRBFWVEb1xqbcKuL7NU7iIu7nVtEfk1OE01O37ZQVFZ10d9GTuh6cqOQDybvO9aQpHpwFuFZmV9+T2Sp5PRXjM3HdsrehlmgHV3A2PTy/KjlRH0ADOa5s1uQAfwESQHMZ5TZ2tAAAAABJRU5ErkJggg=="/>
                     :

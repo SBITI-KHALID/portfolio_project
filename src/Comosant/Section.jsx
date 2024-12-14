@@ -1,14 +1,13 @@
-import { useState } from "react"
+
 
 export default function Section(props){
     const {them} = props
-    const [display,setDesplay]=useState('d-none')
     const handleDownload = () => {
-        // Replace "path-to-your-cv.pdf" with the actual path to your CV file
         const link = document.createElement('a');
-        link.href = 'CV_KHALID_SBITI.pdf';
+        link.href = `${process.env.PUBLIC_URL}/CV_KHALID_SBITI.pdf`;
         link.download = 'CV_KHALID_SBITI.pdf';
         link.click();
+        
     };
     return(
         <div className="py-3">
