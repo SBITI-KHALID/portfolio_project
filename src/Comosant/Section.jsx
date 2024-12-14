@@ -3,36 +3,34 @@ import { useState } from "react"
 export default function Section(props){
     const {them} = props
     const [display,setDesplay]=useState('d-none')
-    const HandlerDisplay = () => {
-        display === 'd-none'?setDesplay('d-flex'):setDesplay('d-none')
-    }
+    const handleDownload = () => {
+        // Replace "path-to-your-cv.pdf" with the actual path to your CV file
+        const link = document.createElement('a');
+        link.href = 'CV_KHALID_SBITI.pdf';
+        link.download = 'CV_KHALID_SBITI.pdf';
+        link.click();
+    };
     return(
         <div className="py-3">
             <div className='imageProfile d-flex aligne-items-center justify-content-center'>
-                <img onClick={HandlerDisplay} className='m-3' src="/WhatsApp Image 2023-04-04 at 01.16.43.jpeg" alt="" />
+                <div></div>
             </div>
+            <br />
             <h4 className='txt w-100 text text-center'>KHALID SBITI</h4>
-            <h6 className='txt w-100 text text-center'>web devlopper</h6>
+            <h6 className='txt w-100 text text-center'>Web Developer</h6>
             <div className="d-flex aligne-items-center justify-content-center">
-                <a target="_blank" href="https://www.linkedin.com/in/sbiti-khalid/">
-                    {them === "clear"?
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASxJREFUSEvl1TsvBFEYh/HfCp2Igso3oNXoKFQKIa6hk/AtJD6GS4m4h0InLo1G7xPoRKUl7Elem81erZndxlQzOe88z5z/Oe+cgjZfhTbzdVxwh/GMs7rHxA+jcgZfGeFV3EaC66ie+oO0xK0nOMBqgA+x3KKkqWAX6wHdw1regnfsowsr6M1b8IrngA5jsLgzHuJ5CP3YxgdGMFfxAU0jOsZSvHSERUo9M4MnvJRBN4vjW2XPTQUnAU3vJNlCxFVvG3fjDX0hySTowRVGQ5waK12PGMtDkLr0NkA72Ij7S0znIUhrcBGgWlGmoaYRncb0U3GCzCPl/IlZnIfgLMbK6/6JoFGjDURzpShq1f0qohb/DFXldRc5jwPnBpM/yo4fmVmjqZ9V7uQAfgNR+VIZag7oTQAAAABJRU5ErkJggg=="/>
+                <a className="mx-1"  target="_blank" href="https://www.linkedin.com/in/sbiti-khalid/">
+                {them === "clear"?
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAntJREFUWEftl89LVFEUxz/nqYi0q6CgRZtK2ghCEFLgIoKaO68ookDbRgRSRjqjWTFS4bwXWpsg2pYIQZvmh0ZEJmTgIggrqDb9ATFBVAtr3o03ocx0XzMPcSbBuct7z73fz/uecw/vCqtsyCrjoQ5UKSPBDl2cbCOvzyG6FU/egozhHnxf6bCVWDeBBrLtaO8FSMuSgCZHAx2MqA8rIVruDBMolr6PSLexSXMHV52pPVA88wpoDxCewVGd/wNoHOgyHZK7uJHTtQeKZXYhMgu6qUj8K7+kg9HIu9oD+Yo+FLoXkVbgDTCGo+arDeOfv8YaY39mM41sBb7Q/P0TieMLlVwOuPaZ/VgMGRvFG2TEflmYH0ptIW/5xV86PC+Ga88Ry3Yj+gqwoyggj+YJom/hRB//C8wEiqdPgtwzN8ghnEiqMD8wtQ2d/xgQEwHvCMipsk5oPYob7QuKCQ/kYXNDpcsD6acg+yqlpbAuHCOpHv4dGx5I68O40UflgUKhLAbN4ajdywciTMqWjs8hzKMLt3gvYAWiLjRs4OaBXPFaeIdCpcxPhR7np+5l1P5cEBrM7sHTfhGvC4DqxFEzywMK5ZD+RoveRML+USIezw5D4daVDqGLpJqoIhAPcNQJQzietUH/qb/S0YOjblcPSOQ6ycglQ3Yw1YFnzQYAXcZR16oIxDBJlTCE+ybbaPBeB6TMiA9f1MXXvj+1Hcsy/x5FXyUZNWsllt6JiPmnIOYH1IFK0lZ3aNGOeg0tOrE2bpnfxBq9o0YT86yJpef0+an1NOfPmjH6OW70mTF/IbWRJqvH7NTeNEl7unynDujvtZxaY6+OZVi76hz6DbiQWjT79nAzAAAAAElFTkSuQmCC"/>
                     :
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUpJREFUSEvllb0uRFEUhb8loxNRUHkDWo2OQqUQgiF0Et5C4jH8lIgZP6HQCaPR6D2BTlRassyRM5MRdyZncu9M43Y3d+/17b3O3veIHj/qsT79Bdh+AGZydlWTNNvQ+NWBbecU/0mX1NTtBLiNsPluoSmAE0mbQdj2KbDeDSQFcChpOwKOgK2iAR/AMTAAbABDRQPegJcoOgGMAY/xfRwYAfaBT2ASWG4tIMWiiqS1aNEZUG4k2V4EniW9NkRt79aHZ685mglTVJVUjoBKvZvVYJekzDG2XQLegeHUMW0LsD0I3ABTASypFgt5AqaLAIQtvY92HEjaiYBrYKEIQDiDqwjI6jRpk88lBd/DolWBFaAk6cv2EnAZAReSwrfWuH8C6LRoo3G5gjNZcUkWdfNn+BPbaZOLuHDuJM1lXji5ym6T3N87uRcdfAO8QNMZrOQi+QAAAABJRU5ErkJggg=="/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAhtJREFUWEftl8+LjVEYxz8fZSE7FGVh40c2SilN1Cxko4ZIqWErqYlZSMmPTFiSjdJs0ZSywUaSMYWahZIfhY0/QJRkofS4Z3pH1ztn5r13zJ17695n+Z7nnOfzfs/zPOcc6TCzw3joAVXtSFahiNgCnAQ2Ae+Aa+qHqsUWYnwGUERsBZ4Dy+oCfAX61I8LEXSuNXJAt4HDmUk31ePtAHoFJJXKNqH2twPoDjCYCTyqHmsH0DbgBbC0Lvj3IofeLzpQChgRCWq4qLK3RZW9aTVMWr+7GmNErAHW1XraN+Cz+qtK5VzZ7wbOZiaeUV8WW7oWSMlfttPqZESktnEB2Fjn8Bt4DFxXH80GlgM6AtzKTNirPiiA1td61aeMzx5gP3C0Qomr6qmcTzNAA+rDCqAnwK6qbSnGD6r3yr7NAO1T71cANcgy5Tapbv8foEa2bHr9dPalNpF+eCewZBbSlWry/WvNKNTIlqWFU7IPq18KNXfUmmpK4uUZqH51Yr5AjSj0A1it/qwPEhEjRdWVmQbVsVYC3VUPlaNGxAAwlX8lG1JvtBLoinouA9RXnI/lofPq5VYCjagXM0DpBvo6o9AM/2aSur7sN9SuKLnb4yU1deh/LCI2A7mbQg9oSqmeQnUJ08uh6cO1u6ssNbEDmSY2Nv2cjogVwImMz7Pa2+1ppg+tAoYy/uPq+JydOjNpUT9116tjPtJ2nEJ/AFlwPjRZvXVZAAAAAElFTkSuQmCC"/>
                     }
                 </a>
-                <a target="_blank"  href="https://github.com/SBITI-KHALID">
+                <a target="_blank" className="mx-1"  href="https://github.com/SBITI-KHALID">
                 {them === "clear"?
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjBJREFUSEu11UnIjlEUB/DfJ7IhCyRZosxFslCKKGFjKEOKEjKlJGOJZAglkiHsCCXDhh0LC5SIjEWysDAkC1KIPOfrvnW/53uHx+I7m/e99/7P/Z9z7jn/p00XW1sX368VQQ/MxgyMxlDafd7hCW4W+1fwu1GgzQim4SSGtMjyLVbiVj1cI4It2J+irVLFv9iKQ2VwPYLNOFDl1jqYDTiS75cJpqRUYz/quwyrsQPd8CbVezgi6n04gWOYl/Ym4W6NJCfoiecYnA53Y2f6H+/wEd/SuhcG4nVab8fe9P8FxhRB/Yl1TrAAl7L0ItVIuYodxKYMOCtVoAPB+SKixRloIu5VuT1F/DgL+DjWlTOI8ozI0hxZ8fIa7CHGpcWDIoMJZYJP6J8A14tBmvOfBBewKPl8Qb8ywYdisAYkwG1M/U+CG5iZfL6jd5ngEcYmQHRL32YSUCIPSfmMPmn/FaKVOzzyGSzPHFfgbMUsAns6w57DkjJB1PwqviJSjD6P8Q89+tGAKOZhbRq4GMSazcflMkHMRHTSoKI9p2MVluJX6umF+JluiJJcS7juJfKXGJWmupNcz03y+x7j0+BNTlmsKV10EUFatqhEdGG71RO7o1if9GdPkzfYlUlJDXa4kJONuU8juQ5xCy26U4jYUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ+eWyjpNtxPmhW/nazVJzPO45MZMh2Z5DYs9Xo8dkNrRdDMt9JZlxP8A6W4YxlKv0WFAAAAAElFTkSuQmCC"/>                
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2dJREFUWEftmFmoTlEUx3/XmPEFmSKU+cWQmSSEDMnsQRIiQyREMstMhjIrJZJIhoQomWeRMmeIFHmRzNP+3/bRubt9hu9+38NN1tt3zl5r/fbaa6+1zpdHEZO8IsbDPwPUGhgGtAOqA1WAYsBb4B1wHdgDXMj0BDKJUElgNDDNOKuf0tFzYD2wGfiaRict0CBgI1AtjVHPGkVOG1HUYiUN0HRgJeQk3+YAS+OIkoAEMiNpVxm+1xFOjdKJA5qdtJsMQcLL5wJLfPpRQIOB/Y5CX5OcVYFJQLOUMI9s7j0ATjnHPtTjw5sXuk0yVCfk9L5RbhL6PQAYBbwCngLPgO/29tUDagN7gX3Ab6t3FVC5COSFXS+9v+KL0BhguxMB7a5HyqhELTsE9HdejgV2JAE9NLtr4CjeBlpkCXQZaOvYkK9GcUBNgXsexzLWPkugY6aC9/bYEJDA8sU9snnm2UJH6ZfdxeMsgWqYvFPelHDs6DYvjwI6Aug2heWM6UndsoQJ1I8CfRxbh8O55UboGtDKUVgFzMwR0AJz6+bH5acLpJDqyoZFBUyFLBeifrbGMfQeqBx1ZC+BWo6COvWEXNDYyq+cCcsnoFwU0C2guaNwEuiZI6ADwEDHlkaUulFAx4FejsI3U/4rAR+zhCpth7cKjp2LQMcoIOXKIo9jlYPFWQJpatD04EqBS+MmtYqfiF35AnQxR3elkFAtgfNAGY++WpJaU764QPqtSh00UjXExkBFe2RTTNPdBahYppHipvmOsB2/vEfhCdAwbM/XXEdap9JXo91tG6AMS1QaTttOv9aMph8cR2UNvKZMTQsqqO6tDS8fbz4StoYf+ID07EaomU60QGftV0agr9FieESYtgHq5HFy1/r4mQSk923MuKGGKrjPZhypacO6DBhi5yVF4VKER81LB2NoNCN1sD4KLIsbYScDG+zqFcCsNElj13QCzsWsVy4GtlMDaaHKvMq9ROVgC/AmBVhnQEfsk9VxHw5JXx0yqN2s81juB6h7+6SrTfzwOx2T5vFNcRtKAyR91aedznQXB6TaciLkWKVEN1ZlJFbSAslIKXNc4+yV1kTQ3ROFwJm++ZXwr21D1YxeYJiPosoEKLChPxXUgG8mbFbV+Q7wIykq4feFAcrEfsZr/wMlhewPsfWUJfen6EsAAAAASUVORK5CYII="/>
                     :
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAm9JREFUSEvFlU2IjlEUx39/kQ1ZIMkS5XOKZKGmiBI2hmKkKBn5Sk0yPko0+WgojeQj7AglzIYdCwuUiHyWSRYWPposTApxPGe6z3TfO8/7zjOLydm87z33f+7/nnPP+T9ikE2DfD41CcxsGLAcWALMBCZDT8wH4DlwJ/PfkPS72kWrEpjZIuAsMKmfLN8DmyTdLcIVEpjZbuBouG2ZKv4F9kg6noL7EJhZC9BW5tQCTLOk9thfQWBmCwBP1f1e3w3AFmA/MAToBLzeUwG/9RHgDHAKWBl89ZIe5CS9BGY2HHgFTAybrZIO+H8z83f4LOl7WI8Axkt6F9b7gMMh7jVQJ+mPr2OC1cC1KL12Sc1lSmVmx4BdEXaZJK9ABcFlYG0EmifpYUmCuqydn0XnnZa0PSXw8kzL05Q0vczhOcbMngCzw/pxlsHclOALMDYAOiQ1DJDgCrAmxHRJGpMSfMoGa1wA3JO0cIAEt4GlIaZb0siU4CkwKwC8W0bXkoCYPEjKV2BU8L+V5K1c8cgXgI1RYJOki2WyMLMm4HyEvSRpXUrgNb8JfAO6vc99/F2PJP0oIjIzn4dtYeB8EHNblTXJ9ZTAZ8I7aQKwGNgMrAd+halulPTTg0JJbgXc0IT8DTBDkk96pVyb2QqX36xUH4E5YfDmhyy2JnW/CjQWZNYgqSP3F4ndSWCH64+kQ9XewMwOZsn0SElkJzI52Rk7qsm1i1srcD8TsRfAS0nnkgx833G5tZSS6xxtZvWAS69PZ5skf/BeMzNX0r3AI8Bl2n/7WH+fTN/3T2anJM8kJpjisi3JH7uq/d+Pfq2bld37B8MT0hliYf0NAAAAAElFTkSuQmCC"/>                    
-                    }
-                </a>
-                <a href="#">
-                {them === "clear"?
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO1JREFUSEvt1T9OAkEYhvEfnQ2egNJQUVFYEiiUC3ADKY1WXoATaKjlDrZooq0JlVaGxIrEC5BQ+i+DbFYghJklFm41yWaeZ7/325mvpOCnVDDfzgX3aEZW9YDWnJGv4D0S/osbI/j6mFdMArWOclj/cLcVPKGDcabiRxymEExRxVsuzmSCWxwHeAO91BENcBKglzhf8mNE9SAr6OM0leACo5D9S4AeoBLWN9iPaXIbwxXnZA+zzLutIlonqOE5VjDfX1gP/gXfCWxym/7tHmwycK4/r+hu6PgVznJn4w5HqwZOonmzwOx8Jiev4ANsbjkZwHaFhAAAAABJRU5ErkJggg=="/>                
-                    :
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPtJREFUSEvtlT1OgkEURc/tbHAFlMaKioLSYCFswB1gSaByA65AYq17sFUSbE2ooDIkVCRswMTyGsh85AOJIc6MsXD6d8/7mfueyPyUWZ/fBdgeAc3Iql4knRcaWxXYdqT4OlzSRjcGsEpmDixCUnWgkgowAS4lzYqKbb8CjRSAd+BU0rLczpSAZ0mtlbjtM+AmdYseJHUC4Bbo736M2CGXAXdANxXgGhgDS0lvoYIToBoAj8BxzJDbkp72+cT2EfCxMdcPffAdoAZMYwFFfLYZ/APWzjxkm/7tGRxycO4lXQWjDYDejjeGki72HpwUx+bL2sghWtbMfvQ/AXhNnBlwviRnAAAAAElFTkSuQmCC"/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA8RJREFUWEftmGvo3mMYxz9fxxzfIKcIhZk3Rs4koZFDcpwXkmwR07RGljan5UxGOY1SmiTSkFiUMHMWKeaQESnyRnLm677W/azf//7/Ts+e58WS693z+93XdX9+132d7kesZ6L1jIf/BpDtg4AZwKHAjsB2wAbA98APwNvAUkmvDXsCvT1ke2PgAmBu2mzPnhutBhYD90r6vY9OLyDbZwB3Azv0MVqzJjw3V9LSLv1OINvzgFtgLPF2laQb2qBagWwHyOVdXzXk+8WSLmvSaQSyPR9o/ZohQarLF0haVKdfC2T7TODxQuHkFJzbA7OB/XrCfJpj7xNgeXHsZ0sq95gcFzmbwtBulU0/TspTB79tnwacD3wDfAF8CfyZs28PYFfgUeAxSQ49228CUS4G8lWslxR6a2WSh2zPBJYUHlguaXpPr9Qus/0UcGrxcpakB7uAVqWv26tQfF/S/iMCrQQOKWyskjSlEcj2vsBHNRuvlHTYiEDPpgp+Yo2NKZLCCWtkwpHZXpieXVso/ZNiIZQ+GxFopxR3ETcbFXbmS7qpCehpILKpKi+lnnTsKDADXdvPACcVtpZJWhtbpYfeAg4sFG6VdMWYgK5JCXd1W3yWQOHSSNmqLJK0YExA0ZhvL2z9KGnbpiP7GtilUIhOffGYgKLyRweoyi+StmgCeg+YVii8IOn4MQE9AZxe2FotafcmoOeAEwqFP1L530bSz6NA2d40D29bFXZWSDqiCShi5bqajRdKun5EoJgaYnooZULSlEEdxW9FjdJvwNHp6N5YF6iU7gcArwKb1ehPT0U3Gu8aKYHid1TqQSONhrgPsDUQRzYnNd2HJUWx7BTbG6bme27u+FvWKHwO7F21V9dcz4tNs3I02keAaIBhOCRKw4u5098h6afqRmmo2zzBx5QZ00IU1DJrq8svknR/9UEdUDx7Bxg000sy0Mv5ljHQj9HinDo32X4AmNXhwg9jj1Tj/m4Fipe2DwaiOwfcr2kc2RmIY7oROAuIeWmepNcbgGJeerIFKGakw9NIE3tMkLYR9lLgrrz6ZklXdgZNXmD7SOCVlvVzJA1s9wPKnooyH+U+JMrBfZK+6wKzfRQQR1wnt0lqvDj0uQZFZt1ZY/kUSdG9J4ntY3LgV9/FMc2WdE/bB3UCZU9FfXoo5qKKsTagGHefr6yNUjJTUpSRVukFlKE2AS7MKR0TwXGp5Ef613ko7vwR8N/mq9SScphvouoNNDBgO/5UmCbp3bZPzdX5A0l/dXml+n5ooGGMr8va/4G6vPYvuC82NL08Uo8AAAAASUVORK5CYII="/>
                     }
                 </a>
                 </div>
@@ -79,8 +77,7 @@ export default function Section(props){
         </tbody>
     </table>
             <div className="w-100 text text-center">
-                <button className="dwnCV">
-                <img className="px-2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOVJREFUSEvtlb0NwjAUhO/IgxFSIlFR0afKCmwBMzACI5BBGICKGhaANiOAnYcShQgiTP6UAgW3tu/z3Xu2iZ4He9bHwABqjKaRUqS289oLU+E/oLJjBx6Ry74aswOwcuQXUWT9OlfWKdrUCVAdw9oDgKAEOcLzQpL3ToCs/1V9WHsG4OdiMTxvQTIuO2vs4Cmgt1uA0Sh1AiRJyMnk+Cm21oD8Jme1oEjk6ulOgMqL8uE5qSxyHdG6Rb4CmDYVdKy/UGSWxVkU0ZglVLcg550g5AmqG4rs3wCdRL9sbvQftDnE7wMe016DGSEbyqoAAAAASUVORK5CYII="/>                   
+                <button className="dwnCV"  onClick={handleDownload} >
                 Download CV
                 </button>
             </div>

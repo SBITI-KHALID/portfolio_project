@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
 }
 .cv{
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .clear{
@@ -39,7 +39,7 @@ header{
     top :0;
     left: 0;
     z-index: 6;
-    background:linear-gradient(to bottom,var(--btnNav),rgba(255, 255, 255, 0)) ;
+   
 }
 
 header span{
@@ -64,11 +64,19 @@ main{
     width: 100%;
     height: 250px;
 }
-.imageProfile img{
+.imageProfile div{
+    width: 250px;
+    height: 250px;
+    min-width: 200px;
+    min-height: 200px;
     border-radius: 100%;
     border: 5px solid var(--mainColor);
     cursor: pointer;
     transition: .2s;
+    background-image: url('image.jpg');
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Section_2{
@@ -83,10 +91,12 @@ main{
     .Section_2{
         display: block;
     }
-
 }
 
 @media screen and (max-width: 700px){
+    .cv{
+        padding-top: 100px;
+    }    
     .Navigator{
         display: none;
     }
@@ -103,8 +113,8 @@ main{
     .buttonNavigator,.navbarrrr{
         display: none;
     }
-
 }
+
 nav ul li a{
     text-decoration: none;
     color: black;
@@ -253,4 +263,111 @@ nav ul {
     background-color:rgba(128, 128, 128, 0.096);
 }
 
-/* line_1 */
+.myNameTitle{
+    font-weight: 100;
+}
+
+.HomeWelcomMessage{
+    height: 300px;
+}
+
+.homeContent h2,
+.homeContent h3
+{
+    font-weight: 100;
+}
+
+.changingWord{
+    color: var(--mainColor);
+    font-weight: 400;
+}
+.wamp{
+    background-image: url('icons/WampServer-logo.svg.png');
+}
+.laravel{
+    background-image: url('icons/laravel.png');
+}
+.xampp{
+    background-image: url('icons/XAMPP_Logo.png');
+}
+.tkinter{
+    background-image: url('icons/wing-python-ide-R5l1cq.png');
+}
+.qt{
+    background-image: url('icons/qt-logo-1631E0218A-seeklogo.com.png');
+}
+.laravel,.wamp,.xampp,.pygame,.tkinter,.qt{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+    background-color: none;
+    display:inline-block;
+    transform: translateY(10px);
+    margin: 0 4px ;
+}
+.pygame{
+    background-image: url('icons/Pygame_logo.svg.png');
+    width: 90px;
+    height: 35px;
+}
+.Front-end{
+    background-image: url("icons/front_end.webp") ;
+}
+.back-end{
+    background-image: url("icons/back_end.png") ;
+}
+.Front-end,.back-end{
+    min-height: 120px;
+    margin-left: 5px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Media query for medium devices (≥768px) */
+@media (max-width: 768px) {
+    /* Add your custom CSS styles here */
+    .Front-end,.back-end{
+        height: 400px;
+    }
+}
+
+.Section_1{
+    height: 100%;
+}
+
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+    width: 7px; /* For vertical scrollbars */
+    height: 7px; /* For vertical scrollbars */
+  }
+  
+  /* Scrollbar track */
+  ::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  
+  /* Scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 6px;
+    background-color:#00c00a;
+  }
+  
+  /* Hover effect */
+  
+.resume ul{
+    list-style-type: none;
+    background-color: rgba(128, 128, 128, 0.096);
+  }
+
+.cards{
+    background-color:rgba(128, 128, 128, 0.096) ;
+}
+
+.contactItems{
+    font-weight: 100;
+}

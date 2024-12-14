@@ -3,19 +3,9 @@ export default function Nav(props){
     const {them,setThem,direction} = props
     return(
         <nav className='col-12 d-flex align-items-center justify-content-center h-100'>
-            <ul className={`${direction} w-100 d-flex align-items-center justify-content-evenly`}>
+            <ul className={`${direction} w-100 d-flex align-items-center justify-content-evenly`}>  
                 <li>
-                <Link to='/Home' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
-                    {them === "clear"?
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPxJREFUSEvt07tKBDEUBuBvn8LCwgvaKCJYKpZ2lj6OvS9ja2cnWgk2qyCCl8LCp1ADM5AdspMTcbtNM8yQ/N9J5mRiwWOy4HwtwAqu8I1TfEWKiwIp/A6bXegrDiNIBEjhN9jGRwes4QXHNaQG5JV/4qgDbrGK6k7GgFJ4voMQMg8YC+//bTqmKlICIuFhZAi0hIeQHMi7JS3ewHuk17GOt27uTHf1QHo+YD8LrHXY0E4XsB9T7KWXHLjHwT8B178NcJIDeTV9JX/dwcy6UsgSWB7R3KtXbI5SFz1iJ3iDh9OesJt/LAFnuMBWI/KMc1zWgMbc8emtt7UZ/wERZUUZyr5HKAAAAABJRU5ErkJggg=="/>
-                    :
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARRJREFUSEvtlLFOwzAURc/9CgaGAoIFhJAYixi7deRz2PmZrmxsFUxILC0SQoJ26NCveMiRE6XBjZ8R3eolSvR8jp99HbHjoR3zcQvM7AB4BAwYS1p7FucSRPgLcBKhX8DQI8kKInwKnAHLKBgAn8BtTtIr6Kx8BdxEwTNwCGQ72SpIwSVVHZhZ6MAlSQr64PXBeiW/BB54iWRDUAL3ShpBJy1h/rGkhSfrZnYEfMfajXRVAjMLzzfgqgZKyka4LTezcAHrMZN0GV7aglfg+p8ET5JGjSC1kr920J2XSlHV6l7QnGU3hnUa9lvUt0Vz4NxzgxM175Iu2t9TMb0DHoDTQskHcC9p0isohGbLi/43WVqi4AcdgqsZWC8YwQAAAABJRU5ErkJggg=="/>                   
-                    }
-                    Home
-                </Link>
-                </li>
-                <li>
-                    <Link to='/About' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
+                    <Link to='/' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
                 {them === "clear"?
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAl5JREFUSEu11dmrjlEUBvDfkQwZLtwhUwohynClECVDhkgoQ8o8X1HIEHeuzBkuhBIXpkSUC+ONlEyZp39AMg9hL+2jc97e7wwXZ9fXt9+9197PWut51tpVmnhUNfH96gNoiWkYi4Hojj94g3u4hNP4WcnRugDGYV++tK5AX2AJrpYZVQLYnIy35AMPsRe38SqvdcVgbESvvLYWO4ogZQBxcQBE2CtwsA734/xy7OJfulfn+f8jRYCJOI8fGI2bDRTBpMTRmWw7HLeqz9UEaIen6Ig12FlyeR8sxCK0zftB8mGMwDo8yYIIJ2upKIjanw+9TXtbcQqfM9GRilVoUSGqUNQohPKm4FwR4AIm4B2CxLIRXkVke7JdmxT1rJTS9ehR40DwtrgIEBd3yeHFf4ANQ880v5O8u47jeF6CHOmdh6Up6r64iyFFgC9onX/fGkhu0Swi+pTU9D6pqUMR4GMmrj1iHiP0vywXXHBQc5TtxdkP+XzMa5Ec7PdOpT8gtYcH+aZoC2WKi7WyvUE5PY/RrwhwIklsJmpWZGMjiMrelng7lqp+bhFgDo5mEkPvvxvJQ3O8zAqckSVeK0VBcKQpJDo/af9IIwFW5jbxLKf5ezGC+B6Dy6kiv2IoHjUQJGyjGTbDyNRmblQiLtY3YHtWw+yk5yjASiMujHQcSp00JBpRRBFWVEb1xqbcKuL7NU7iIu7nVtEfk1OE01O37ZQVFZ10d9GTuh6cqOQDybvO9aQpHpwFuFZmV9+T2Sp5PRXjM3HdsrehlmgHV3A2PTy/KjlRH0ADOa5s1uQAfwESQHMZ5TZ2tAAAAABJRU5ErkJggg=="/>
                     :
@@ -36,18 +26,7 @@ export default function Nav(props){
                     </Link>
 
                 </li>
-                <li>
-                <Link to='/Project' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
-
-                {them === "clear"?
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALpJREFUSEvllUsKwkAQRN+cwoUgSBZ6Gy/jJjfQC+Ug2bgTBRfeQjEkkBGbKiIBE2fb3fW6a36JkVcaWR8F2AEHYBs0cgL2QBU1qgB3YCGmPAPFUMCjLYwaUXFpkRJQ8Qyg/HbPQ7Yv/dFvwNJVcfelD5DjmvBMZ54A0wmZ1rjzySJZaSaEAHWpOn2V93sA0xn+4JiqJ1xZFVp0BVaq2oxfgPX7PXi9pkdgY4pEaTVQdr/ct3bIXqYPeALxuikZaMVsGwAAAABJRU5ErkJggg=="/>
-                    :
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMZJREFUSEvllUEKwkAMRd8/hQtBEBd6Gy/jxhvohTyIG3ei4MJbRFqoWNuZBOugaLfzk5f8ZDqi8KfC+ckCzGwJbIBFopADsJK0SxXqAa7AyOnyKGn2KsCqQEm9hZhZ9ryOzVXnJfDOW4CA39F9aM3l3oGZXYBxNEt0Lo8A188I/Nm2HwREbIhomtXuWBQJjmiSAO9SNck93fcBIrZUmj9Y09Tw3mHRGZhEEzm6k6Rp3990C8wHQvbAunnlPvsmD+ykDi/ewQ3bvokZuRyp8QAAAABJRU5ErkJggg=="/>
-                    }
-                    Project
-                    </Link>
-
-                </li>
+     
                 <li>
                 <Link to='/Contact' className=" w-100 h-100 flex-column d-flex align-items-center justify-content-center h-100">
 

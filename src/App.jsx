@@ -5,10 +5,8 @@ import Nav from './Comosant/Nav';
 import { useEffect, useState } from 'react';
 import ScrollReveal from 'scrollreveal';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Comosant/Home';
 import About from './Comosant/About';
 import Resume from './Comosant/Resume';
-import Project from './Comosant/Project';
 import Contact from './Comosant/Contact';
 function App() {
   const sr = ScrollReveal({
@@ -40,8 +38,8 @@ function App() {
     </div>
     <div className='container cv'>
         <header className='Header w-100  d-flex align-items-center justify-content-between'>
-          <h1 className='m-4'><span>KHALID</span> <span className='txt'>SBITI</span></h1>
-          <div style={{transform:`translateX(${toggelbtn})`}} onClick={handlerToggler} className='buttonNavigator mx-4 flex-column align-items-center justify-content-center'>
+          <h1 className='m-4 myNameTitle'>  </h1>
+          <div style={{transform:`translateX(${toggelbtn})`}} onClick={handlerToggler} className='buttonNavigator my-3 mx-4 flex-column align-items-center justify-content-center'>
             <div className={line_1} ></div>
             <div></div>
             <div className={line_3} ></div>
@@ -60,10 +58,8 @@ function App() {
           </section>
           <main className='main col-12 mt-2 pb-3 mb-5'>
             <Routes>
-              <Route path='/Home' element={ <Home them={them} /> } />
-              <Route path='/About' element={ <About them={them} /> } />
+              <Route path='/' element={ <About them={them} /> } />
               <Route path='/Resume' element={ <Resume them={them}  /> } />
-              <Route path='/Project' element={ <Project them={them} /> } />
               <Route path='/Contact' element={ <Contact them={them} /> } />
             </Routes>
           </main>
