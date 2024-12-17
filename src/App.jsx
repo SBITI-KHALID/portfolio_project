@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './Comosant/About';
 import Resume from './Comosant/Resume';
 import Contact from './Comosant/Contact';
+import ParticleBackground from './Comosant/Particle'
 function App() {
   const sr = ScrollReveal({
     distance:"40px",
@@ -32,6 +33,7 @@ function App() {
   },[])
   return (
   <BrowserRouter>
+  <ParticleBackground/>
   <div className={`cvv ${them}`}>
     <div style={{right:toggel}} className='navbarrrr align-items-center justify-content-center'>
       <Nav direction={'flex-column'} them={them} setThem={setThem}/>

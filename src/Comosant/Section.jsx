@@ -1,4 +1,5 @@
-
+import React from "react";
+import Typical from "react-typical";
 
 export default function Section(props){
     const {them} = props
@@ -15,8 +16,21 @@ export default function Section(props){
                 <div></div>
             </div>
             <br />
-            <h4 className='txt w-100 text text-center'>KHALID SBITI</h4>
-            <h6 className='txt w-100 text text-center'>Web Developer</h6>
+            <h2 className='txt w-100 text text-center'>KHALID SBITI</h2>
+
+        <Typical
+          steps={[
+            "Web Developer", 3000,  // Pause time between text changes (in ms)
+            "Back-End Developer", 3000,
+            "Front-End Developer", 3000
+          ]}
+          typeSpeed={100}   // Slow typing speed (in ms per character)
+          backSpeed={100}    // Slower backspacing speed (in ms per character)
+          backDelay={3000}  // Delay before backspacing starts (in ms)
+          loop={Infinity}   // Loop forever
+          wrapper="p"    // Wrap the text in a span
+          className="text txt text-center"
+        />
             <div className="d-flex aligne-items-center justify-content-center">
                 <a className="mx-1"  target="_blank" href="https://www.linkedin.com/in/sbiti-khalid/">
                 {them === "clear"?
