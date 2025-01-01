@@ -32,7 +32,7 @@ export default function Particle() {
               events: {
                 onClick: {
                   enable: true,
-                  mode: "push",
+                  mode: "none",
                 },
                 onHover: {
                   enable: true,
